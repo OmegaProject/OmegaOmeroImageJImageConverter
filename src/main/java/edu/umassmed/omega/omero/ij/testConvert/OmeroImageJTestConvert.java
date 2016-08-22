@@ -1,11 +1,9 @@
-package main.java.edu.umassmed.omega.omero.ij.testConvert;
+package edu.umassmed.omega.omero.ij.testConvert;
 
 import ij.ImagePlus;
 
 import java.io.IOException;
 
-import main.java.edu.umassmed.omega.commons.data.imageDBConnectionElements.OmegaGateway;
-import main.java.edu.umassmed.omega.omero.commons.OmeroGateway;
 import net.imagej.Dataset;
 import net.imagej.ImageJ;
 import net.imagej.omero.OMEROService;
@@ -13,6 +11,9 @@ import omero.ServerError;
 
 import org.scijava.convert.ConvertService;
 import org.scijava.service.Service;
+
+import edu.umassmed.omega.commons.data.imageDBConnectionElements.OmegaGateway;
+import edu.umassmed.omega.omero.commons.OmeroGateway;
 
 public class OmeroImageJTestConvert {
 
