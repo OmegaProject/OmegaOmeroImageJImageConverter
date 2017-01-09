@@ -17,16 +17,19 @@ import edu.umassmed.omega.omero.commons.OmeroGateway;
 
 public class OmeroImageJTestConvert {
 
-	private final ImageJ imagej;
+	private static ImageJ imagej;
 	private final OMEROService ome;
 	private final ConvertService conv;
 
 	public OmeroImageJTestConvert() {
 		// Thread.currentThread().setContextClassLoader(IJ.getClassLoader());
-		this.imagej = new ImageJ();
-		final Service serv = this.imagej.get(OMEROService.class);
+		if (OmeroImageJTestConvert.imagej == null) {
+			OmeroImageJTestConvert.imagej = new ImageJ();
+		}
+		final Service serv = OmeroImageJTestConvert.imagej
+				.get(OMEROService.class);
 		this.ome = (OMEROService) serv;
-		this.conv = this.imagej.convert();
+		this.conv = OmeroImageJTestConvert.imagej.convert();
 	}
 
 	public ImagePlus convert(final Long imageID, final OmegaGateway gateway) {
