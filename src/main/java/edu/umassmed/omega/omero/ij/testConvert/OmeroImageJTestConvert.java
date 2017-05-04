@@ -38,7 +38,7 @@ public class OmeroImageJTestConvert {
 		Dataset dataset = null;
 		try {
 			dataset = this.ome.downloadImage(
-			        ((OmeroGateway) gateway).getClient(), imageID);
+					((OmeroGateway) gateway).getClient(), imageID);
 		} catch (final IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -50,5 +50,9 @@ public class OmeroImageJTestConvert {
 		if (dataset == null)
 			return null;
 		return this.conv.convert(dataset, ImagePlus.class);
+	}
+	
+	public void showImage(final ImagePlus imgPlus) {
+		OmeroImageJTestConvert.imagej.ui().show(imgPlus);
 	}
 }
