@@ -16,11 +16,11 @@ import edu.umassmed.omega.commons.data.imageDBConnectionElements.OmegaGateway;
 import edu.umassmed.omega.omero.commons.OmeroGateway;
 
 public class OmeroImageJTestConvert {
-
+	
 	private static ImageJ imagej;
 	private final OMEROService ome;
 	private final ConvertService conv;
-
+	
 	public OmeroImageJTestConvert() {
 		// Thread.currentThread().setContextClassLoader(IJ.getClassLoader());
 		if (OmeroImageJTestConvert.imagej == null) {
@@ -31,7 +31,7 @@ public class OmeroImageJTestConvert {
 		this.ome = (OMEROService) serv;
 		this.conv = OmeroImageJTestConvert.imagej.convert();
 	}
-
+	
 	public ImagePlus convert(final Long imageID, final OmegaGateway gateway) {
 		if (!(gateway instanceof OmeroGateway))
 			return null;
@@ -51,7 +51,7 @@ public class OmeroImageJTestConvert {
 			return null;
 		return this.conv.convert(dataset, ImagePlus.class);
 	}
-	
+
 	public void showImage(final ImagePlus imgPlus) {
 		OmeroImageJTestConvert.imagej.ui().show(imgPlus);
 	}

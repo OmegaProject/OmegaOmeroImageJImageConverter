@@ -1,125 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
 		http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<groupId>edu.umassmed.omega</groupId>
+	<artifactId>omero.ij.testConvert</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>omega.omero.ij.testConvert</name>
+	<description>TBD</description>
+	<url>TBD</url>
+	<inceptionYear>TBD</inceptionYear>
+	<organization>
+		<name>TBD</name>
+	</organization>
+	<licenses>
+		<license>
+			<name>TBD</name>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>riganoa</id>
+			<name>Alex Rigano</name>
+			<roles>
+				<role>founder</role>
+				<role>lead</role>
+				<role>developer</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>N/A</name>
+		</contributor>
+	</contributors>
+	<mailingLists>
+		<mailingList>
+			<name>N/A</name>
+		</mailingList>
+	</mailingLists>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/OmegaProject/Omega/issues</url>
+	</issueManagement>
+	<scm>
+		<connection>scm:git:git://github.com/OmegaProject/Omega</connection>
+		<developerConnection>scm:git:git@github.com:OmegaProject/Omega</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/OmegaProject/Omega</url>
+	</scm>
+	<ciManagement>
+		<system>N/A</system>
+	</ciManagement>
+
 	<parent>
-		<groupId>net.imagej</groupId>
-		<artifactId>pom-imagej</artifactId>
-		<version>11.0.0</version>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>16.0.0</version>
 		<relativePath />
 	</parent>
-	
-  	<groupId>edu.umassmed.omega</groupId>
- 	<artifactId>omero.ij.testConvert</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  	<packaging>jar</packaging>
 
-  	<name>testConvert</name>
-  	<description>TBD</description>
-  	<url>TBD</url>
-  	
-  	<properties>
-  		<scijava.jvm.version>1.7</scijava.jvm.version>
-  	</properties>
+	<properties>
+		<scijava.jvm.version>1.8</scijava.jvm.version>
+		<license.licenseName>N/A</license.licenseName>
+		<license.copyrightOwners>N/A</license.copyrightOwners>
+	</properties>
 
-  	<repositories>
+	<repositories>
 		<repository>
 			<id>imagej.public</id>
 			<url>http://maven.imagej.net/content/groups/public</url>
 		</repository>
 	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>edu.umassmed.omega</groupId>
-      		<artifactId>omero.commons</artifactId>
-      		<version>0.0.1-SNAPSHOT</version>
-      		<exclusions>
-      			<exclusion>
-      				<artifactId>testng</artifactId>
-      				<groupId>org.testng</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>commons-logging</artifactId>
-      				<groupId>commons-logging</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>commons-collections</artifactId>
-      				<groupId>commons-collections</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>velocity-dep</artifactId>
-      				<groupId>velocity</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>jhdf5</artifactId>
-      				<groupId>ch.systems.cisd</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>hibernate-jpa-2.0-api</artifactId>
-      				<groupId>org.hibernate.javax.persistence</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>commons-beanutils-core</artifactId>
-      				<groupId>commons-beanutils</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>logback-classic</artifactId>
-      				<groupId>ch.qos.logback</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>findbugs-ant</artifactId>
-      				<groupId>net.sourceforge.findbugs</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>jta</artifactId>
-      				<groupId>javax.transaction</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>javassist</artifactId>
-      				<groupId>javassist</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>aspectjweaver</artifactId>
-      				<groupId>org.aspectj</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>xml-apis</artifactId>
-      				<groupId>xml-apis</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>asm</artifactId>
-      				<groupId>asm</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>netcdf</artifactId>
-      				<groupId>edu.ucar</groupId>
-      			</exclusion>
-      		</exclusions>
+			<artifactId>omero.commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>aopalliance</artifactId>
+					<groupId>aopalliance</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>org.springframework.aop</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>org.springframework.core</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>org.springframework.beans</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>org.springframework.transaction</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>org.springframework.asm</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jcl-over-slf4j</artifactId>
+					<groupId> org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>testng</artifactId>
+					<groupId>org.testng</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-collections</artifactId>
+					<groupId>commons-collections</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>velocity-dep</artifactId>
+					<groupId>velocity</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jhdf5</artifactId>
+					<groupId>ch.systems.cisd</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>hibernate-jpa-2.0-api</artifactId>
+					<groupId>org.hibernate.javax.persistence</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-beanutils-core</artifactId>
+					<groupId>commons-beanutils</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>logback-classic</artifactId>
+					<groupId>ch.qos.logback</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>findbugs-ant</artifactId>
+					<groupId>net.sourceforge.findbugs</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jta</artifactId>
+					<groupId>javax.transaction</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>javassist</artifactId>
+					<groupId>javassist</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>aspectjweaver</artifactId>
+					<groupId>org.aspectj</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>xml-apis</artifactId>
+					<groupId>xml-apis</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>asm</artifactId>
+					<groupId>asm</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>netcdf</artifactId>
+					<groupId>edu.ucar</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>edu.umassmed.omega</groupId>
-      		<artifactId>commons</artifactId>
-      		<version>0.0.1-SNAPSHOT</version>
-      		<exclusions>
-      			<exclusion>
-      				<artifactId>jfreechart</artifactId>
-      				<groupId>jfreechart</groupId>
-      			</exclusion>
-      			<exclusion>
-      				<artifactId>jcommon</artifactId>
-      				<groupId>jcommon</groupId>
-      			</exclusion>
-      		</exclusions>
+			<artifactId>commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>jfreechart</artifactId>
+					<groupId>jfreechart</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jcommon</artifactId>
+					<groupId>jcommon</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
-      		<groupId>junit</groupId>
-      		<artifactId>junit</artifactId>
-      		<scope>test</scope>
-    	</dependency>
-    	<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>imagej</artifactId>
 		</dependency>
@@ -246,52 +319,52 @@
 			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
-	
-<build>
-	<finalName>omega.omero.ij.testConvert-${version}</finalName>
-	<plugins>
-		<plugin>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<configuration>
-				<source>1.7</source>
-				<target>1.7</target>
-			</configuration>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-jar-plugin</artifactId>
-			<configuration>
-				<!-- DO NOT include log4j.properties file in your Jar -->
-				<!-- <excludes> -->
-				<!-- <exclude>**/log4j.properties</exclude> -->
-				<!-- </excludes> -->
-				<archive>
-					<manifest>
-						<addClasspath>true</addClasspath>
-						<classpathPrefix>dependency-jars/</classpathPrefix>
-						<!-- Jar file entry point -->
-						<!-- <mainClass>com.mkyong.core.utils.App</mainClass> -->
-					</manifest>
-				</archive>
-			</configuration>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-dependency-plugin</artifactId>
-			<executions>
-				<execution>
-					<id>copy-dependencies</id>
-					<phase>package</phase>
-					<goals>
-						<goal>copy-dependencies</goal>
-					</goals>
-					<configuration>
-						<!-- exclude junit, we need runtime dependency only -->
-						<outputDirectory>${project.build.directory}/dependency-jars/</outputDirectory>
-					</configuration>
-				</execution>
-			</executions>
-		</plugin>
-	</plugins>
-</build>
+
+	<build>
+		<finalName>${project.name}-${project.version}</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<!-- DO NOT include log4j.properties file in your Jar -->
+					<!-- <excludes> -->
+					<!-- <exclude>**/log4j.properties</exclude> -->
+					<!-- </excludes> -->
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>dependency-jars/</classpathPrefix>
+							<!-- Jar file entry point -->
+							<!-- <mainClass>com.mkyong.core.utils.App</mainClass> -->
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<!-- exclude junit, we need runtime dependency only -->
+							<outputDirectory>${project.build.directory}/dependency-jars/</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
