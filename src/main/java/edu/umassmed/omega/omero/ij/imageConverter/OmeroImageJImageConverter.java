@@ -1,4 +1,4 @@
-package edu.umassmed.omega.omero.ij.testConvert;
+package edu.umassmed.omega.omero.ij.imageConverter;
 
 import ij.ImagePlus;
 
@@ -15,21 +15,21 @@ import org.scijava.service.Service;
 import edu.umassmed.omega.commons.data.imageDBConnectionElements.OmegaGateway;
 import edu.umassmed.omega.omero.commons.OmeroGateway;
 
-public class OmeroImageJTestConvert {
+public class OmeroImageJImageConverter {
 	
 	private static ImageJ imagej;
 	private final OMEROService ome;
 	private final ConvertService conv;
 	
-	public OmeroImageJTestConvert() {
+	public OmeroImageJImageConverter() {
 		// Thread.currentThread().setContextClassLoader(IJ.getClassLoader());
-		if (OmeroImageJTestConvert.imagej == null) {
-			OmeroImageJTestConvert.imagej = new ImageJ();
+		if (OmeroImageJImageConverter.imagej == null) {
+			OmeroImageJImageConverter.imagej = new ImageJ();
 		}
-		final Service serv = OmeroImageJTestConvert.imagej
+		final Service serv = OmeroImageJImageConverter.imagej
 				.get(OMEROService.class);
 		this.ome = (OMEROService) serv;
-		this.conv = OmeroImageJTestConvert.imagej.convert();
+		this.conv = OmeroImageJImageConverter.imagej.convert();
 	}
 	
 	public ImagePlus convert(final Long imageID, final OmegaGateway gateway) {
@@ -53,6 +53,6 @@ public class OmeroImageJTestConvert {
 	}
 
 	public void showImage(final ImagePlus imgPlus) {
-		OmeroImageJTestConvert.imagej.ui().show(imgPlus);
+		OmeroImageJImageConverter.imagej.ui().show(imgPlus);
 	}
 }
