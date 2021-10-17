@@ -170,6 +170,14 @@
 					<artifactId>netcdf</artifactId>
 					<groupId>edu.ucar</groupId>
 				</exclusion>
+				<!-- exclusion>
+					<groupId>org.openmicroscopy</groupId>
+					<artifactId>omero-gateway</artifactId>
+				</exclusion-->
+				<exclusion>
+					<groupId>edu.umassmed.omega</groupId>
+					<artifactId>commons</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -199,14 +207,19 @@
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>imagej-omero</artifactId>
+			<version>0.8.0</version>
 			<exclusions>
-				<exclusion>
+				<!-->exclusion>
 					<artifactId>omero-client</artifactId>
 					<groupId>ome</groupId>
-				</exclusion>
+				</exclusion-->
 				<exclusion>
 					<artifactId>slf4j-api</artifactId>
 					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>omero</groupId>
+					<artifactId>blitz</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
